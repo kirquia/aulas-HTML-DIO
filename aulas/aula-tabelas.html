@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Tabelas com HTML</title>
+    <style>
+        table {
+            cursor: pointer;
+            -webkit-box-shadow: 30px 30px 55px 0px rgba(0,0,0,0.67);
+            -moz-box-shadow: 30px 30px 55px 0px rgba(0,0,0,0.67);
+            box-shadow: 30px 30px 55px 0px rgba(0,0,0,0.67);
+        }
+        table thead th {
+            background-color: black;
+            color: white;
+        }
+        table tbody tr:nth-child(even) td{
+            background-color: lightcoral;
+        }
+        table tbody tr:hover td{
+            background-color: coral;
+        }
+        table tfoot td {
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Criando Tabelas com HTML</h1>
+    <table summary="Esta tabela refere-se as idades de pessoas..." border="1" width="250" cellspacing="0" cellpadding="10" align="center">
+        <caption>Tabela de idades de pessoas comuns</caption>
+        <thead>
+            <tr>
+                <th  colspan="3">Linha Mesclada</th>
+            </tr>
+            <tr>
+                <th title="Nome Completo">NOME</th>
+                <th>IDADE</th>
+                <th>OBS</th>
+            </tr>
+        </thead>
+        <tbody>    
+            <tr id="1">
+                <td>Kirquia</td>
+                <td>36</td>
+                <td rowspan="7">Coluna Mesclada</td>
+            </tr>
+            <tr id="2">
+                <td>Joao</td>
+                <td>31</td>
+            </tr>
+            <tr id="3">
+                <td>Maria</td>
+                <td>30</td>
+            </tr>
+            <tr id="4">
+                <td>Manoela</td>
+                <td>38</td>
+            </tr>
+            <tr id="5">
+                <td>José</td>
+                <td>27</td>
+            </tr>
+            <tr id="6">
+                <td>Ana</td>
+                <td>29</td>
+            </tr>
+            <tr id="7">
+                <td>Tobias</td>
+                <td>35</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td colspan="2">7</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

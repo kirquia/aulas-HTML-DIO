@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AULA SOBRE FORMULÁRIOS HTML</title>
+</head>
+<body>
+    <h1 align="center">AULA SOBRE FORMULÁRIOS HTML</h1>
+    <hr>
+    <form name="signup" target="_blank" onsubmit="alert=('Formulário enviado');" autocomplete="on" method="post" action="#">
+        FORMULÁRIO DE CADASTRO <br>
+        NOME: <input type="text" name="name"><br>
+        IDADE: <input type="number" name="age" placeholder="ex.: 18"><br>
+        SENHA: <input type="password" name="password"><br>
+        <button type="submit">Enviar</button>
+    </form>
+    <hr>
+    <form action="#">
+        <label for="">O input text é um campo para inserir nomes. Text:</label><input type="text"><br>
+        <label for="">O input number é um campo para inserir números. Number:</label><input type="number" min="0" step="2" max="10"><br>
+        <label for="">O input range é um campo para inserir scrols. Range:</label><input type="range" min="0" max="100" value="75"><br>
+        <label for="">O input color é um campo para inserir nomes. Color:</label><input type="color"><br>
+        <label for="">O input email é um campo para inserir e-mails. Email:</label><input type="email"><br>
+        <label for="">O input url é um campo para inserir URLs. Url:</label><input type="url"><br>
+        <label for="">O input date é um campo para inserir datas. Date:</label><input type="date"><br>
+        <label for="">O input week é um campo para inserir a semana do ano. Week:</label><input type="week"><br>
+        <label for="">O input month é um campo para inserir o mês do ano. Month:</label><input type="month"><br>
+        <label for="">O input checkbox é um campo para marcar e desmarcar. Checkbox:</label><input type="checkbox"><br>
+        <label for="">O input radio é um campo para marcar e desmarcar. Radio:</label><input type="radio" name="aceita"><br>
+        <label for="">O input hidden é um campo invisível. Hidden:</label><input type="hidden"><br>
+        <label for="">O input file é um campo para escolher e enviar arquivos. File:</label><input type="file" multiple><br>
+        <label for="">O input search é um campo para fazer buscas na internet. Search:</label><input type="search"><br>
+        <label for="">O input button é um campo para inserir botões. A tag button serve para o mesmo fim. Button:</label><input type="button" value="Enviar"><button type="submit">Enviar</button><br>
+    </form>
+    <hr>
+    <p>Com o method="get" inserido dentro da tag form, aparece na url de formulario a ser enviada os itens selecionados/inseridos, já com o method="post" eles não aparecem.</p>
+    <p>Usar name="comColchetes[]" permite a inserção de um ou mais itens do input checkbox; porém, sem esses colchetes o backend fará a leitura apenas do último item selecionado.</p>
+    <p>O evento onsubmit serve para validar os dados do usuário antes do envio ao servidor</p>
+    <hr>
+    <form method="post">
+        <h3>Você selecionou: Pizza de Calabresa</h3>
+        <p><b>Quais Opcionais você deseja?</b><br>
+        <br>
+        <input type="checkbox" name="opcional[]" value="queijo"> + queijo<br>
+        <input type="checkbox" disabled name="opcional[]" value="calabresa"> + calabresa<br>
+        <input type="checkbox" name="opcional[]" value="azeitona"> + azeitona<br>
+        <input type="checkbox" name="opcional[]" value="cebola"> + cebola<br>
+        <p><b>Borda recheada?</b></p>
+        <input type="radio" name="borda" value="Sim">Sim<br>
+        <input type="radio" name="borda" value="Não">Não<br>
+        <p><b>Bebida?</b></p>
+        <input type="radio" name="bebida" value="suco">Suco<br>
+        <input type="radio" name="bebida" value="refrigerante">Refrigerante<br>
+        <input type="radio" name="bebida" value="água">Água<br>
+        <input type="radio" name="bebida" value="nenhum">Nenhum<br>
+        <br>
+        <button type="submit">Enviar Pedido</button><br>
+    </form>
+    <hr>
+    <form onsubmit="">
+        FORMULÁRIO DE CADASTRO <br>
+        <label>NOME: </label><input type="text" name="name"><br>
+        <label>IDADE: </label><input type="number" name="age"><br>
+        <label>SENHA: </label><input type="password" name="password"><br>
+        
+        *Três tipos de botões* <br>
+        <button type="button" onclick="alert=('Cliquei aqui')">Clicável (só faz algo se aplicar um código JS nele)</button><br>
+        <button type="reset">Limpar Campos do form</button><br>
+        <button type="submit">Enviar o Formulário</button><br>
+    </form>
+    <hr>
+    <form onsubmit="" method="get">
+        <h1 contenteditable>FORMULÁRIO</h1><br>
+        <label>NOME: </label><input minlength="3" type="text" name="name" required><br>
+        <label>CARGO: </label>
+        <select name="role" autofocus>
+            <option value="">Selecione o cargo</option>
+            <option value="presidente">Presidente</option>
+            <option selected value="administrativo">Administrativo</option>
+            <option value="diretor">Diretor</option>
+            <option value="gerente">Gerente</option>
+        </select><br>
+        <label>ASSUNTO: </label><input type="text" name="subject"><br>
+        <label for="">Mensagem:</label>
+        <textarea minlength="10" maxlength="100" name="message" id="" cols="30" rows="10"></textarea>
+        <button type="submit">Enviar</button><br>
+    </form>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h3>Estruturando seu HTML + Formatações</h3>
+</head>
+<body>
+    <title>Estruturando seu HTML + Formatações</title>
+    <h3>Atributos que compõem a tag font</h3>
+    <p>A tag font sozinha não modifica nada. É preciso usar atributos para caracterizá-la.</p>
+    <font color="red" face="Arial, Roboto">Kirquia Nayalla</font>
+    <p>A tag div serve para estruturar o site, para delimitar o espaço onde o texto deve ficar disposto. Ela toma todo o espaço horizontal da página onde foi disposta.</p>
+    <div id="menu-lateral">
+        <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul>
+    </div>
+    <p>A tag span serve para preparar um simples caractere para a estilização em CSS.</p>
+            Kirquia <span style="color: red;">N</span>ayalla
+    <p>A tag fieldset serve para criar um contorno em um campo.</p>
+    <P>A tag legend serve para nomear o contorno fieldset.</P>
+    <form>
+        FORMULÁRIO DE CADASTRO <br>
+        <fieldset>
+            <legend>DADOS PESSOAIS</legend>
+        NOME: <input type="text" name="name"><br>
+        IDADE: <input type="number" name="age"><br>
+        </fieldset>
+        <fieldset>
+            <legend>PASSWORD</legend>
+        SENHA: <input type="password" name="password"><br>
+        </fieldset>
+        <button type="submit">Enviar</button>
+    </form>
+    <p>A tag embed está em desuso, mas serve para dar prioridade ao conteúdo de multimídia que será aberto na página. Foi substituída pela tag video. A tag track serve para colocar legenda no vídeo. A função default serve para priorizar a legenda onde esta função está ativada.</p>
+        <video controls autoplay width="400" height="250">
+            <source src="Marcela Tais - Voar (Sony Music Live).mp4">
+            <track default src="legenda.vtt" kind="captions" srclang="pt-br">
+            <track src="legenda.vtt" kind="captions" srclang="en">
+            Seu navegador não  tem suporte para vídeo.
+        </video>
+    <p>A tag iframe permite abrir uma janela dentro da página com conteúdo de outra página.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Ypgm-M_Xl14?si=nK_--l3Ua8J-EPsP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br>
+    <iframe src="https://dio.me" width="600" height="300"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124770.07056135207!2d-39.014639142546216!3d-12.243898150737435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71439dbd0766da9%3A0xed4d58d8df9d5ffe!2sFeira%20de%20Santana%20-%20Maria%20Quit%C3%A9ria%2C%20Feira%20de%20Santana%20-%20BA!5e0!3m2!1spt-BR!2sbr!4v1706360915905!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <p>Tag img:</p>
+    <img title="Jesus é o Único Caminho!" src="Unico_caminho.gif" alt="imagem: Jesus, o Único Caminho">
+    <p>Tag audio:</p>
+    <audio controls>
+        <source src="É Só O Começo - Vocal Livre - PB.mp3">
+        Seu navegador não tem suporte para áudio.
+    </audio>
+</body>
+</html>

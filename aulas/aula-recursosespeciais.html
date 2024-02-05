@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Especiais HTML</title>
+    <style>
+        kbd {
+            border: solid 1px black;
+        }
+        code {
+            background-color: #f1f1f1;
+            color: red;
+        }
+        pre {
+            background: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <p>A tag datalist usa a tag option apenas como sugestão para digitação, diferente da tag select.</p>
+    <input list="browsers" type="search" name="search">
+        <datalist id="browsers">
+            <option>Google Chrome</option>
+            <option>Safari</option>
+            <option>Microsoft Edge</option>
+            <option>Opera</option>
+            <option>Mozilla FireFox</option>    
+        </datalist>
+    <hr>
+    <select name="browsers">
+        <option value="">Selecione um Navegador</option>
+        <option value="chrome">Google Chrome</option>
+        <option value="safari">Safari</option>
+        <option value="edge">Microsoft Edge</option>
+        <option value="opera">Opera</option>
+        <option value="firefox">Mozilla FireFox</option>
+    </select>
+    <hr>
+    <p>A tag kbd serve para mostrar inputs de teclado. Ex.: <kbd>CRTL</kbd> + <kbd>C</kbd></p>
+    <hr>
+    <p>A tag code serve para mostrar comandos com fonte mono-space. Ex.: <code>background-color</code></p>
+    <hr>
+    <p>A tag pre serve para colocar todo o código CSS no texto com fonte mono-space. Ex.:</p>
+        <pre>
+            code {
+                background-color: #f1f1f1;
+                color: red;
+            }
+        </pre>
+    <hr>
+    <details>
+        <summary>Pra que serve a tag details?</summary>
+        <p>A tag details serve para criar um campo que se expande ao ser clicado.</p>
+    </details>
+    <details>
+        <summary>Pra que serve a tag summary?</summary>
+        <p>A tag summary serve para criar um título para a tag details.</p>
+    </details>
+    <hr>
+    <p>A tag meter é um medidor.</p>
+    <meter  min="0" max="100" value="50"></meter>
+    <p>A tag progress serve para definir o progresso de uma ação.</p>
+    <progress id="progress" min="0" max="100" value="0"></progress>
+        <script>
+            var progress = document.getElementById('progress');
+            const interval = setInterval(() => {
+                progress.value += 10;
+                if (progress.value >= 100) {
+                    alert('Carregamento realizado com sucesso')
+                    clearInterval(interval);
+                }
+            }, 1000);
+        </script>
+    <hr>
+    <p>A tag canvas é usada para manipular gráficos dentro dela usando o javascript.</p>
+    <canvas id="canvas" width="300" height="300" style="border: 1px solid #000000;">
+        <script>
+            var canvas = document.getElementById("canvas");
+            var ctx = canvas.getContext("2d");
+            var amount = 10000;
+            var size = 2;
+
+            function draw() {
+            for (let i = 0; i < amount; i++) {
+                var x = randomIntFromInterval(0, canvas.width);
+                var y = randomIntFromInterval(0, canvas.width);
+                ctx.fillStyle =
+                "rgba(" +
+                randomIntFromInterval(0, 255) +
+                "," +
+                randomIntFromInterval(0, y) +
+                ", " +
+                randomIntFromInterval(0, x / 3) +
+                ", 1)";
+
+                ctx.fillRect(x, y, size, size);
+            }
+            }
+
+            function randomIntFromInterval(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+            }
+
+            window.addEventListener("resize", resizeScreen);
+            var drawInterval = setInterval(draw, 20);
+
+            function resizeScreen() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            }
+        </script>
+    </canvas>
+</body>
+</html>

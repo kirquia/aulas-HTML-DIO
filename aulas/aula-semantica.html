@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Semântico</title>
+</head>
+<body bgcolor="#000000">
+    <font face="Arial" color="#FFFFFF">
+        <h1 align="center">HTML - Semântica</h1>
+        <p>Tags que, ao serem inseridas, ficam em vermelho estão em desuso no HTML 5. Ex.: bgcolor, font, align.</p>
+        <h2>Acessibilidade</h2>
+        <p>A tag alt serve para robôs de acessibilidade lerem uma descrição previamente escrita nela afim de facilitar o acesso a ela por pessoas com dificuldade.</p>
+        <img src="imagemexemploacessibilidade.jpeg" width="500" alt="Imagem de uma mulher usando um vestido branco, na praia, com os braços abertos. Acima está escrita a seguinte frase motivacional: Quando faltar sorte, faça sobrar atitude: o azar morre de medo de pessoas determinadas.">
+        <h2>Web Scraping</h2>
+        <p>"Rastreador" (Crawler - também chamado de "robô" ou "indexador") é um termo genérico para qualquer programa usado para descobrir e examinar sites automaticamente seguindo links entre páginas da Web. Ex.: GoogleBot</p>
+        <h2>Tags HTML 5 - Estrutural</h2>
+        <header>Header</header>
+        <main>Main - tag principal depois de Body
+            <header>Header - filha de Main</header>
+            <section>Section - filha de Main - são sessões de informações sobre o conteúdo de navegação - Uma lista de resultados de pesquisa
+                <header>Header - filha de Section</header>
+                <footer>Footer - filha de Section</footer>
+            </section>
+            <figure>
+                <img src="car.jpeg" alt="Imagem de um carro azul e do sol ao fundo.">
+                <figcaption>A tag figure serve para delimitar o escopo de uma imagem. A tag figcaption serve para descrever a imagem da tag figure.</figcaption>
+            </figure>
+            <picture>
+                <source srcset="car2.jpeg" media="(min-width: 600px)">
+                <img src="car3.jpeg" alt="Imagem de um carro">
+                <figcaption>A tag picture serve para carregar imagens diferentes de acordo com a resolução da tela do dispositivo.</figcaption>
+            </picture>
+            <article>Article - filha de Main - destinada a colocar artigos dentro dela.
+                <header>
+                    <h1>Artigo</h1>
+                    <p>Artigo publicado em <time pubdate>01/02/2024 16:22</time></p>
+                    <p>Parágrafos...</p>
+                    <p>Parágrafos...</p>
+                    <blockquote cite="https://cooknenjoy.com/alfajor-de-biscoito-maria/"><p>Parágrafos de citação blockote...</p>
+                        <p>Parágrafos de citação blockote...</p>
+                        <p>Parágrafos de citação blockote...</p>
+                        <p>Parágrafos de citação blockote...</p>
+                        <p>Parágrafos de citação blockote...</p>
+                    </blockquote>
+                    <p>Parágrafo...<q cite="http://www.dio.me">A tag q serve para fazer uma pequena citação.</q></p>
+                </header>
+
+                <footer></footer>
+            </article>
+            <nav>Nav - Filha de Main - é um menu de links de navegação
+                <ul>
+                    <li><a href="#">Item</a></li>
+                    <li><a href="tel: +5575991404892">Telefone</a></li>
+                </ul>
+            </nav>
+            <aside>Aside - Filha de Main - Assunto que não tem haver com o assunto principal da página - Não deve colocar no aside texto entre parênteses.
+            </aside>    
+            <footer>Footer - filha de Main</footer>
+            </main>
+        <footer>Footer
+            <address>Address - filha de Footer</address>
+        </footer>
+    </font>
+</body>
+</html>
